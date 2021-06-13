@@ -53,7 +53,6 @@ const Dashboard = () => {
   return (
     <div>
       <h1 className="white pt4 pb6">List of Star Wars Movies</h1>
-      {movies && console.log(movies)}
       {error ? (
         <h3 className="white pa4">Something went wrong: {errorMessage}</h3>
       ) : (
