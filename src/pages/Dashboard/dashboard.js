@@ -27,32 +27,42 @@ const Dashboard = () => {
     {
       Header: "Name",
       accessor: "title",
+      minWidth: 200,
+      style: { padding: "1rem 0 1rem 0" },
     },
     {
       Header: "Director",
       accessor: "director",
+      minWidth: 200,
+      style: { padding: "1rem 0 1rem 0" },
     },
     {
       Header: "Producers",
       accessor: "producer",
+      minWidth: 400,
+      style: { padding: "1rem 0 1rem 0" },
     },
     {
       Header: "Opening Lines",
       accessor: "opening_crawl",
+      minWidth: 800,
+      style: { padding: "1rem 0 1rem 0" },
     },
   ];
 
   return (
     <div>
       <h1 className="white pt4 pb6">List of Star Wars Movies</h1>
+      {movies && console.log(movies)}
       {error ? (
         <h3 className="white pa4">Something went wrong: {errorMessage}</h3>
       ) : (
         <ReactTable
           data={movies}
           columns={columns}
-          defaultPageSize={3}
-          pageSizeOptions={[3]}
+          defaultPageSize={6}
+          pageSizeOptions={[6]}
+          resizable
           style={{ background: "white" }}
           className="-striped -highlight"
         />
