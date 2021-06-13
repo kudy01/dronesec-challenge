@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - yarn
+  build:
+    commands:
+      - yarn run build
+      - CI=true yarn test
+
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build

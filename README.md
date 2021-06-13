@@ -43,4 +43,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 1. The app has been deployed on S3 using `AWS S3 Static Hosting`.
 2. Redirected React App from S3 to `AWS Cloudfront` and enabled `HTTPS` in Cloudfront
-3. Set up CI/CD using `CircleCI`
+3. Set up CI/CD using `AWS Code Pipeline`
